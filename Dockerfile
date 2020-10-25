@@ -11,7 +11,7 @@ COPY ./package.json /web/package.json
 RUN npm install
 
 # Installs react-scripts (can skip if in package.json)
-RUN npm install react-scripts
+# RUN npm install react-scripts
 
 # Copies the code to the web directory in the Docker container
 COPY . /web/
