@@ -8,10 +8,10 @@ WORKDIR /web
 COPY ./package.json /web/package.json
 
 # Installs all node packages
-RUN yarn add
+RUN npm install
 
 # Installs react-scripts (can skip if in package.json)
-RUN yarn add react-scripts
+RUN npm install react-scripts
 
 # Copies the code to the web directory in the Docker container
 COPY . /web/
@@ -19,4 +19,4 @@ COPY . /web/
 # Port to be exposed
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
